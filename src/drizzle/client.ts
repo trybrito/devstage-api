@@ -4,7 +4,7 @@ import { env } from '../env'
 import { subscriptions } from './schema/subscriptions'
 
 export const postgres = postgresClient(env.POSTGRES_URL)
-export const drizzle = drizzleORM(postgres, {
+export const db = drizzleORM(postgres, {
   schema: {
     subscriptions,
   },

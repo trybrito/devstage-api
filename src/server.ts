@@ -8,8 +8,8 @@ import {
   serializerCompiler,
   validatorCompiler,
 } from 'fastify-type-provider-zod'
-import { z } from 'zod'
 import { env } from './env'
+import { accessInviteLinkRoute } from './routes/access-invite-link.routes'
 import { subscribeToEventRoute } from './routes/subscribe-to-event.routes'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -37,6 +37,7 @@ app.register(fastifySwaggerUi, {
 })
 
 app.register(subscribeToEventRoute)
+app.register(accessInviteLinkRoute)
 
 app
   .listen({
