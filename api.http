@@ -9,3 +9,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3333/invites/something123
+
+###
+
+GET http://localhost:3333/subscribers/something123/ranking/clicks
