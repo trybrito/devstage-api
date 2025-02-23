@@ -1,7 +1,6 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import z from 'zod'
 import { getSubscriberInviteClicks } from '../functions/get-subscriber-invite-clicks'
-import { redis } from '../redis/client'
 
 export const getSubscriberInviteClicksRoute: FastifyPluginAsyncZod = async (
   app
@@ -22,7 +21,7 @@ export const getSubscriberInviteClicksRoute: FastifyPluginAsyncZod = async (
         },
       },
     },
-    async (request, reply) => {
+    async (request) => {
       const { subscriberId } = request.params
 
       const { count } = await getSubscriberInviteClicks({ subscriberId })
