@@ -14,3 +14,7 @@ GET http://localhost:3333/invites/417a3f0a-88e1-4900-9995-03ebc82535c8
 ###
 
 GET http://localhost:3333/subscribers/417a3f0a-88e1-4900-9995-03ebc82535c8/ranking/clicks
+
+###
+
+GET http://localhost:3333/subscribers/417a3f0a-88e1-4900-9995-03ebc82535c8/ranking/clicks
