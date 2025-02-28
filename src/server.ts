@@ -10,11 +10,12 @@ import {
 } from 'fastify-type-provider-zod'
 import { env } from './env'
 import { accessInviteLinkRoute } from './routes/access-invite-link.routes'
+import { getRankingRoute } from './routes/get-ranking.routes'
 import { getSubscriberInviteClicksRoute } from './routes/get-subscriber-invite-clicks.routes'
-import { subscribeToEventRoute } from './routes/subscribe-to-event.routes'
 import { getSubscriberInvitesCountRoute } from './routes/get-subscriber-invites-count.routes'
 import { getSubscriberRankingPositionRoute } from './routes/get-subscriber-ranking-position.routes'
-import { getRankingRoute } from './routes/get-ranking.routes'
+import { sendMessageRoute } from './routes/send-message.routes'
+import { subscribeToEventRoute } from './routes/subscribe-to-event.routes'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 const PORT = env.PORT
@@ -46,6 +47,7 @@ app.register(getSubscriberInviteClicksRoute)
 app.register(getSubscriberInvitesCountRoute)
 app.register(getSubscriberRankingPositionRoute)
 app.register(getRankingRoute)
+app.register(sendMessageRoute)
 
 app
   .listen({

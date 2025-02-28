@@ -27,3 +27,12 @@ GET http://localhost:3333/subscribers/f26a721f-ca72-4d11-a22b-5e5be68a9af7/ranki
 
 GET http://localhost:3333/ranking
 
+###
+
+POST http://localhost:3333/messages
+Content-Type: application/json
+
+{
+  "message": "Quais os emails cadastrados em minha aplicação"
+}
+
