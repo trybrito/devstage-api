@@ -1,12 +1,13 @@
+import { ConsoleLogWriter } from 'drizzle-orm'
 import { redis } from '../redis/client'
 
-interface GetSubscriberInvitesCount {
+interface GetSubscriberInvitesCountParams {
   subscriberId: string
 }
 
 export async function getSubscriberInvitesCount({
   subscriberId,
-}: GetSubscriberInvitesCount) {
+}: GetSubscriberInvitesCountParams) {
   const count = await redis.zscore('referral:ranking', subscriberId)
 
   return { count: count ? Number.parseInt(count) : 0 }

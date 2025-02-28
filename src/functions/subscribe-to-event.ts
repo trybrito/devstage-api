@@ -33,6 +33,7 @@ export async function subscribeToEvent({
 
   if (referrerId) {
     await redis.zincrby('referral:ranking', 1, referrerId)
+    const rank = await redis.zrevrank('referral:ranking', referrerId);
   }
 
   return {
