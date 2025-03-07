@@ -1,6 +1,5 @@
 import { tool } from 'ai'
 import z from 'zod'
-import { postgres } from '../drizzle/client'
 import { redis } from '../redis/client'
 
 export const postgresTool = tool({
