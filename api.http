@@ -4,7 +4,7 @@ Content-Type: application/json
 {
   "name": "User3",
   "email": "user3@mail.com",
-  "referrerId": "417a3f0a-88e1-4900-9995-03ebc82535c8"
+  "referrer": "417a3f0a-88e1-4900-9995-03ebc82535c8"
 }
 
 ###

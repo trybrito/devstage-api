@@ -25,7 +25,7 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async (app) => {
 
       const redirectUrl = new URL(env.WEB_URL)
 
-      redirectUrl.searchParams.set('referrerId', subscriberId)
+      redirectUrl.searchParams.set('referrer', subscriberId)
 
       // 301 = redirect permanente (cacheado -> não é bom para quando queremos contabilizar algo a partir do acesso à URL)
       // 302 = redirect temporário (não cacheado);
